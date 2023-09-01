@@ -30,8 +30,17 @@ class BaseDeDatos:
         self.cursor.execute(query, (curso["nombre_curso"], curso["id_estudiante"]))
         self.conexion.commit()
 
+    
+    def leer_tabla(self, tabla):
+        self.cursor.execute(f"SELECT * FROM {tabla}")
+        return self.cursor.fetchall()
+
 
 if __name__ == '__main__':
+    # se instancia la base de datos para poder usarla en el proyecto
+    db = BaseDeDatos()
+
+    # se llena la base de datos
     datos_estudiantes = [
         {"nombre": "Alice",     "apellido": "Johnson",  "edad": 25},
         {"nombre": "Bob",       "apellido": "Smith",    "edad": 32},
@@ -50,7 +59,6 @@ if __name__ == '__main__':
         {"nombre_curso": "Ingles",        "id_estudiante": 4}
     ]
 
-    db = BaseDeDatos()
     for estudiante in datos_estudiantes:
         db.insertar_estudiante(estudiante)
     

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        /* Estilo de tabla hecho por chatGPT */
+        /* Estilo para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        /* Estilo para las filas impares */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        /* Estilo para las celdas encabezado (th) */
+        th {
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px;
+            text-align: left;
+        }
+        /* Estilo para las celdas de datos (td) */
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        /* Estilo cuando se coloca el cursor sobre una fila */
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cursos</h1>
+    <p>Estilo de tabla hecho por chatGPT 🤖🎨</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>ID de Estudiante</th>
+        </tr>
+        {% for curso in cursos %}
+            <tr>
+                {% for data in curso %}
+                    <td>{{ data }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
