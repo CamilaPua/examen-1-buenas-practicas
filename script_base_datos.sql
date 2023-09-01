@@ -29,7 +29,7 @@ CREATE TABLE `cursos` (
   PRIMARY KEY (`id_curso`),
   KEY `Cursos_FK` (`id_estudiante`),
   CONSTRAINT `Cursos_FK` FOREIGN KEY (`id_estudiante`) REFERENCES `estudiantes` (`id_estudiante`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `cursos` (
 
 LOCK TABLES `cursos` WRITE;
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
+INSERT INTO `cursos` VALUES (1,'Ingles',1),(2,'Sofware',1),(3,'Innovacion',1),(4,'Ingles',2),(5,'Innovacion',2),(6,'Software',3),(7,'Software',4),(8,'Ingles',4);
 /*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,7 +55,7 @@ CREATE TABLE `estudiantes` (
   `apellido` varchar(100) NOT NULL,
   `edad` int(11) NOT NULL,
   PRIMARY KEY (`id_estudiante`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,6 +64,7 @@ CREATE TABLE `estudiantes` (
 
 LOCK TABLES `estudiantes` WRITE;
 /*!40000 ALTER TABLE `estudiantes` DISABLE KEYS */;
+INSERT INTO `estudiantes` VALUES (1,'Alice','Johnson',25),(2,'Bob','Smith',32),(3,'Charlie','Brown',28),(4,'David','Davis',40);
 /*!40000 ALTER TABLE `estudiantes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +77,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-01 14:37:36
+-- Dump completed on 2023-09-01 16:16:31
