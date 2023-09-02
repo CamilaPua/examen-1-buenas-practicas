@@ -15,7 +15,7 @@ Este comando activa la app en el 127.0.0.1:5000
 python app_flask/main.py
 ```
 
-## Observaciónes
+## Observaciones
 - Se ha cargado un script que arma un esquema y llena una base de datos en mysql
 
 - En el archivo conexion.py se usan variables de entorno, ignore de la linea 1 a la 6 y reemplaze lo necesario en las lineas 13 y 14
