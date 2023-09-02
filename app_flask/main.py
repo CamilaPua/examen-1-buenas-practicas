@@ -19,3 +19,7 @@ def estudiantes():
 def cursos():
     cursos = db.leer_tabla('cursos')
     return render_template('cursos.html', cursos=cursos)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
